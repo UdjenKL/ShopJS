@@ -9,7 +9,12 @@ productDetail.addEventListener('click', () => {
     modalProduct.classList.add('modal_open');
 })
 
-modalProduct.addEventListener('click', () => {
-    // console.log('click');
-    modalProduct.classList.remove('modal_open');
+modalProduct.addEventListener('click',(event)=>{
+    const target = event.target
+
+    if(target.closest('.modal__close')) {
+        modalProduct.classList.remove('modal_open');
+
+    }
 })
+
